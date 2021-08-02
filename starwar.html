@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Star War</title>
+  </head>
+  <style>
+    body {
+      background-image: url("https://wallpaperstock.net/star-wars%3A-force-unleashed-wallpapers_20844_1920x1200.jpg");
+
+      background-repeat: no-repeat;
+      color: rgb(226, 0, 0);
+    }
+    input {
+      height: 50px;
+      width: 300px;
+      margin: auto;
+    }
+    #container {
+      height: 400px;
+      width: 305px;
+      border: 1px solid rgb(54, 0, 0);
+      border-top: none;
+      overflow: scroll;
+    }
+    .sing {
+      height: 30px;
+      background-color: rgb(151, 170, 121);
+      margin: 5px;
+      border-radius: 10px;
+      text-align: center;
+      padding-top: 10px;
+      font-weight: bold;
+    }
+    .sing:hover {
+      background-color: gray;
+      color: rgb(248, 220, 141);
+    }
+
+    div {
+      margin-left: 39.9%;
+    }
+    #all_cont {
+      margin: auto;
+      display: grid;
+      text-align: center;
+    }
+  </style>
+  <body>
+    <div id="all_cont">
+      <h1 style="font-size: 50px">Star Wars</h1>
+      <input
+        oninput="throttleFunction()"
+        type="text"
+        id="query"
+        onkeypress="collectData(event)"
+      />
+      <div id="container"></div>
+    </div>
+  </body>
+</html>
+<script src="starwarapi.js"></script>
